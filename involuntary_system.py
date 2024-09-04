@@ -20,7 +20,7 @@ class Inventory:
 
             print(f"Updated{item_name} stock by {quantity} units.")
         else:
-            print(f"Error:{item_name} not found in inventory")
+            print(f"Error:{item_name} not found in inventory.")
         
     def view_inventory(self):            # displays a list of all items in the inventory along with thier
         print("\nCurrent Inventory:")    # current stock level and price per unit
@@ -38,11 +38,11 @@ class Inventory:
 
 inventory=Inventory ()
 
-inventory.add_item("Smartphone", 50, 2500)
+inventory.add_item("Smartphone", 40, 2500)
 inventory.add_item("laptop", 30, 8000)
 inventory.add_item("bracelet", 60,1500)
 inventory.add_item("Tablet", 50, 4000)
-inventory.add_item("Smart Watch", 55, 1500)
+inventory.add_item("Smart Watch", 50, 1500)
 
 
 inventory.update_stock("laptops",15)
@@ -50,4 +50,4 @@ inventory.update_stock("Smartphone",-12)
 
 inventory.view_inventory()
 
-print(inventory.check_stock("laptop"))
+print(inventory.check_stock("bracelet"))
